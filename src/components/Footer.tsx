@@ -59,8 +59,8 @@ export function Footer() {
             <h3 className="text-white text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm">
               <li>Email: support@priceguru.in</li>
-              <li>Phone: +91 98765 43210</li>
-              <li>Address: Tech Park, Bengaluru, Karnataka, India</li>
+              <li>Phone: +91 Shashank,Purushottam</li>
+              <li>Address: BMSCE, Bengaluru, Karnataka, India</li>
             </ul>
           </div>
         </div>
