@@ -49,10 +49,11 @@ export function HeroSection() {
         <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm text-muted-foreground">
           <span>Popular searches:</span>
           <a href="/search?q=iPhone%2016" className="hover:text-brand-purple hover:underline">iPhone 16</a>
-          <a href="/search?q=Samsung%20S24" className="hover:text-brand-purple hover:underline">Samsung S24</a>
+          <a href="/search?q=PlayStation%205" className="hover:text-brand-purple hover:underline">PlayStation 5</a>
+          <a href="/search?q=Samsung%20TV" className="hover:text-brand-purple hover:underline">Samsung TV</a>
           <a href="/search?q=OnePlus" className="hover:text-brand-purple hover:underline">OnePlus</a>
-          <a href="/search?q=PS5" className="hover:text-brand-purple hover:underline">PS5</a>
-          <a href="/search?q=MacBook%20Pro" className="hover:text-brand-purple hover:underline">MacBook Pro</a>
+          <a href="/search?q=MacBook" className="hover:text-brand-purple hover:underline">MacBook</a>
+          <a href="/search?q=LG%20OLED" className="hover:text-brand-purple hover:underline">LG OLED</a>
         </div>
       </div>
       

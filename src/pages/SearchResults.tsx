@@ -20,6 +20,7 @@ const searchProducts = async (query: string) => {
   
   // Mock data based on search query
   const mockProducts = [
+    // Phones
     {
       id: 1,
       name: "iPhone 16",
@@ -63,9 +64,123 @@ const searchProducts = async (query: string) => {
         croma: 75999,
       },
       slug: "samsung-s24"
+    },
+    {
+      id: 5,
+      name: "Samsung S24 Ultra",
+      image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2Ftc3VuZyUyMHBob25lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      price: {
+        amazon: 124999,
+        flipkart: 123999,
+        croma: 125999,
+      },
+      slug: "samsung-s24-ultra"
+    },
+    {
+      id: 6,
+      name: "OnePlus 12",
+      image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2Ftc3VuZyUyMHBob25lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      price: {
+        amazon: 61999,
+        flipkart: 60999,
+        croma: 62999,
+      },
+      slug: "oneplus-12"
+    },
+    // TVs
+    {
+      id: 7,
+      name: "Samsung 55\" QLED 4K Smart TV",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
+      price: {
+        amazon: 64990,
+        flipkart: 65999,
+        croma: 67990,
+      },
+      slug: "samsung-55-qled-4k"
+    },
+    {
+      id: 8,
+      name: "LG 65\" OLED C3 Smart TV",
+      image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1057&q=80",
+      price: {
+        amazon: 179990,
+        flipkart: 181999,
+        croma: 184990,
+      },
+      slug: "lg-65-oled-c3"
+    },
+    {
+      id: 9,
+      name: "Sony 65\" Bravia XR OLED TV",
+      image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1057&q=80",
+      price: {
+        amazon: 249990,
+        flipkart: 251999,
+        croma: 254990,
+      },
+      slug: "sony-65-bravia-xr-oled"
+    },
+    // Gaming consoles
+    {
+      id: 10,
+      name: "PlayStation 5 Slim",
+      image: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80",
+      price: {
+        amazon: 46990,
+        flipkart: 47990,
+        croma: 48990,
+      },
+      slug: "playstation-5-slim"
+    },
+    {
+      id: 11,
+      name: "PlayStation 5 Digital Edition",
+      image: "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1327&q=80",
+      price: {
+        amazon: 39990,
+        flipkart: 40990,
+        croma: 41990,
+      },
+      slug: "playstation-5-digital"
+    },
+    {
+      id: 12,
+      name: "Xbox Series X",
+      image: "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80",
+      price: {
+        amazon: 49990,
+        flipkart: 50990,
+        croma: 51990,
+      },
+      slug: "xbox-series-x"
+    },
+    // Laptops
+    {
+      id: 13,
+      name: "MacBook Air M3",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80",
+      price: {
+        amazon: 109990,
+        flipkart: 111990,
+        croma: 112990,
+      },
+      slug: "macbook-air-m3"
+    },
+    {
+      id: 14,
+      name: "MacBook Pro M3 Pro",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80",
+      price: {
+        amazon: 169990,
+        flipkart: 171990,
+        croma: 172990,
+      },
+      slug: "macbook-pro-m3-pro"
     }
   ];
   
+  // Filter based on query (case insensitive)
   return mockProducts.filter(product => 
     product.name.toLowerCase().includes(query.toLowerCase())
   );
@@ -123,7 +238,7 @@ const SearchResults = () => {
           </div>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products && products.map((product) => (
             <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-square overflow-hidden bg-gray-100">
@@ -131,10 +246,13 @@ const SearchResults = () => {
                   src={product.image} 
                   alt={product.name}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+                  }}
                 />
               </div>
               <CardContent className="p-5">
-                <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
+                <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.name}</h3>
                 <div className="space-y-1 mb-4">
                   <div className="flex justify-between text-sm">
                     <span>Amazon</span>

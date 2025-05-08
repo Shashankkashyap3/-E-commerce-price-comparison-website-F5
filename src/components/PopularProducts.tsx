@@ -17,36 +17,80 @@ const products = [
   },
   {
     id: 2,
-    name: "iPhone 16 Pro (256GB)",
-    image: "https://images.unsplash.com/photo-1706385187266-3ae1dccd3fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    price: "₹1,19,990",
-    lowestPrice: "₹1,16,990",
+    name: "PlayStation 5 Slim",
+    image: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80",
+    price: "₹49,990",
+    lowestPrice: "₹46,990",
     savings: "₹3,000",
-    stores: 7,
+    stores: 6,
     rating: 4.8,
-    slug: "iphone-16-pro-256gb"
+    slug: "playstation-5-slim"
   },
   {
     id: 3,
-    name: "iPhone 16 Pro Max (256GB)",
-    image: "https://images.unsplash.com/photo-1707226803980-d45115806e80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    price: "₹1,39,990",
-    lowestPrice: "₹1,35,990",
-    savings: "₹4,000",
-    stores: 6,
-    rating: 4.9,
-    slug: "iphone-16-pro-max-256gb"
+    name: "Samsung 55\" QLED 4K Smart TV",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
+    price: "₹69,990",
+    lowestPrice: "₹64,990",
+    savings: "₹5,000",
+    stores: 7,
+    rating: 4.5,
+    slug: "samsung-55-qled-4k"
   },
   {
     id: 4,
+    name: "MacBook Air M3",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80",
+    price: "₹1,14,990",
+    lowestPrice: "₹1,09,990",
+    savings: "₹5,000",
+    stores: 5,
+    rating: 4.7,
+    slug: "macbook-air-m3"
+  },
+  {
+    id: 5,
+    name: "OnePlus 12 (256GB)",
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80",
+    price: "₹64,990",
+    lowestPrice: "₹61,990",
+    savings: "₹3,000",
+    stores: 6,
+    rating: 4.5,
+    slug: "oneplus-12-256gb"
+  },
+  {
+    id: 6,
+    name: "Sony WH-1000XM5 Headphones",
+    image: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1088&q=80",
+    price: "₹34,990",
+    lowestPrice: "₹29,990",
+    savings: "₹5,000",
+    stores: 8,
+    rating: 4.9,
+    slug: "sony-wh-1000xm5"
+  },
+  {
+    id: 7,
     name: "Samsung Galaxy S24 Ultra",
-    image: "https://images.unsplash.com/photo-1707226803980-d45115806e80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
     price: "₹1,29,999",
     lowestPrice: "₹1,24,999",
     savings: "₹5,000",
     stores: 6,
     rating: 4.5,
     slug: "samsung-galaxy-s24-ultra"
+  },
+  {
+    id: 8,
+    name: "LG 65\" OLED C3 Smart TV",
+    image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1057&q=80",
+    price: "₹1,89,990",
+    lowestPrice: "₹1,79,990",
+    savings: "₹10,000",
+    stores: 5,
+    rating: 4.8,
+    slug: "lg-65-oled-c3"
   }
 ];
 
@@ -68,7 +112,7 @@ export function PopularProducts() {
           </a>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {products.map((product) => (
             <div 
               key={product.id} 
@@ -82,6 +126,9 @@ export function PopularProducts() {
                     src={product.image}
                     alt={product.name}
                     className="object-contain max-h-full"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+                    }}
                   />
                 </div>
                 <h3 className="font-medium text-lg mb-2 line-clamp-2">{product.name}</h3>
