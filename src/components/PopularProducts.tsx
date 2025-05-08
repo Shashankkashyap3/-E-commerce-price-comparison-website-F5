@@ -5,16 +5,36 @@ import { Badge } from "@/components/ui/badge";
 const products = [
   {
     id: 1,
-    name: "iPhone 15 Pro Max (256GB)",
+    name: "iPhone 16 (128GB)",
     image: "https://images.unsplash.com/photo-1695578430122-aca1f7944f6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
-    price: "₹1,42,990",
-    lowestPrice: "₹1,39,900",
-    savings: "₹3,090",
-    stores: 5,
-    rating: 4.7
+    price: "₹79,990",
+    lowestPrice: "₹77,990",
+    savings: "₹2,000",
+    stores: 8,
+    rating: 4.6
   },
   {
     id: 2,
+    name: "iPhone 16 Pro (256GB)",
+    image: "https://images.unsplash.com/photo-1706385187266-3ae1dccd3fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    price: "₹1,19,990",
+    lowestPrice: "₹1,16,990",
+    savings: "₹3,000",
+    stores: 7,
+    rating: 4.8
+  },
+  {
+    id: 3,
+    name: "iPhone 16 Pro Max (256GB)",
+    image: "https://images.unsplash.com/photo-1707226803980-d45115806e80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    price: "₹1,39,990",
+    lowestPrice: "₹1,35,990",
+    savings: "₹4,000",
+    stores: 6,
+    rating: 4.9
+  },
+  {
+    id: 4,
     name: "Samsung Galaxy S24 Ultra",
     image: "https://images.unsplash.com/photo-1707226803980-d45115806e80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
     price: "₹1,29,999",
@@ -22,26 +42,6 @@ const products = [
     savings: "₹5,000",
     stores: 6,
     rating: 4.5
-  },
-  {
-    id: 3,
-    name: "OnePlus 12 (16GB RAM, 512GB)",
-    image: "https://images.unsplash.com/photo-1706385187266-3ae1dccd3fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    price: "₹64,999",
-    lowestPrice: "₹59,999",
-    savings: "₹5,000",
-    stores: 4,
-    rating: 4.6
-  },
-  {
-    id: 4,
-    name: "Sony PlayStation 5 Slim",
-    image: "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80",
-    price: "₹54,990",
-    lowestPrice: "₹49,990",
-    savings: "₹5,000",
-    stores: 7,
-    rating: 4.8
   }
 ];
 
