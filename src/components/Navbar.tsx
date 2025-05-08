@@ -7,6 +7,8 @@ import {
   SheetContent,
   SheetTrigger
 } from "@/components/ui/sheet";
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const categories = [
   "Smartphones",
@@ -20,11 +22,13 @@ const categories = [
 
 export function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Searching for:", searchQuery);
-    // In a full implementation, this would redirect to search results
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
   };
 
   return (
@@ -45,7 +49,7 @@ export function Navbar() {
                   {categories.map((category) => (
                     <a
                       key={category}
-                      href="#"
+                      href={`/search?q=${encodeURIComponent(category)}`}
                       className="block px-4 py-2 text-sm hover:bg-accent rounded-md"
                     >
                       {category}
@@ -56,19 +60,19 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
           
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <span className="text-xl font-bold text-brand-purple">Price<span className="text-brand-orange">Guru</span></span>
-          </a>
+          </Link>
           
           <div className="hidden md:flex ml-8 space-x-6">
             {categories.slice(0, 4).map((category) => (
-              <a
+              <Link
                 key={category}
-                href="#"
+                to={`/search?q=${encodeURIComponent(category)}`}
                 className="text-sm text-muted-foreground hover:text-foreground"
               >
                 {category}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -92,7 +96,12 @@ export function Navbar() {
               <span className="sr-only">Search</span>
             </Button>
           </form>
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="md:hidden"
+            onClick={() => navigate('/search')}
+          >
             <Search className="h-5 w-5" />
             <span className="sr-only">Search</span>
           </Button>

@@ -2,14 +2,17 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 export function HeroSection() {
   const [searchQuery, setSearchQuery] = React.useState("");
+  const navigate = useNavigate();
   
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Searching for:", searchQuery);
-    // In a full implementation, this would redirect to search results
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
   };
   
   return (
@@ -45,11 +48,11 @@ export function HeroSection() {
         
         <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm text-muted-foreground">
           <span>Popular searches:</span>
-          <a href="#" className="hover:text-brand-purple hover:underline">iPhone 15</a>
-          <a href="#" className="hover:text-brand-purple hover:underline">Samsung S24</a>
-          <a href="#" className="hover:text-brand-purple hover:underline">OnePlus</a>
-          <a href="#" className="hover:text-brand-purple hover:underline">PS5</a>
-          <a href="#" className="hover:text-brand-purple hover:underline">MacBook Pro</a>
+          <a href="/search?q=iPhone%2016" className="hover:text-brand-purple hover:underline">iPhone 16</a>
+          <a href="/search?q=Samsung%20S24" className="hover:text-brand-purple hover:underline">Samsung S24</a>
+          <a href="/search?q=OnePlus" className="hover:text-brand-purple hover:underline">OnePlus</a>
+          <a href="/search?q=PS5" className="hover:text-brand-purple hover:underline">PS5</a>
+          <a href="/search?q=MacBook%20Pro" className="hover:text-brand-purple hover:underline">MacBook Pro</a>
         </div>
       </div>
       
